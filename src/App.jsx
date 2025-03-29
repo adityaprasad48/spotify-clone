@@ -1,18 +1,16 @@
 import React, { useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useStateValue } from "./StateProvider";
-import Player from "./Player";
-import { getTokenFromResponse } from "./spotify";
+import Player from "./comp/player/Player";
+import { getTokenFromResponse } from "./utils/spotify";
 import "./App.css";
-import Login from "./Login";
+import Login from "./comp/login/Login";
 
 const s = new SpotifyWebApi();
 
 function App() {
   // dispatch code
   const [{ token }, dispatch] = useStateValue();
-  
-
 
   useEffect(() => {
     // Set token
