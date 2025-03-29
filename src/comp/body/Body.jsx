@@ -1,11 +1,11 @@
 import React from "react";
-import "./comp/body/Body.css";
-import Header from "./comp/header/Header";
-import { useStateValue } from "./StateProvider";
-import SongRow from "./comp/song_row/SongRow";
+import "./Body.css";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import Header from "../header/Header";
+import SongRow from "../song_row/SongRow";
+import { useStateValue } from "../../StateProvider";
 
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = useStateValue();
